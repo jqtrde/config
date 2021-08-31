@@ -1,141 +1,132 @@
-[aws]
-disabled = false
-format = ' [$symbol($profile):($region) ]($style)'
-style = "yellow"
-symbol = "🅰 "
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$package\
+$deno\
+$nodejs\
+$python\
+$rust\
+$nix_shell\
+$memory_usage\
+$custom\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$shell\
+$character"""
 
-[line_break]
-disabled = true
+# ⏽
 
-[aws.region_aliases]
-us-east-1 = "va"
+[directory]
+style = "black"
+format = "[$path]($style)[$read_only]($read_only_style) ⏽"
+truncate_to_repo = true
+truncation_symbol = "…/"
 
-[character]
-format = "→ "
-success_symbol = " #174FCA"
-error_symbol = "  #C53409"
+[git_branch]
+style = "blue"
+symbol = ""
+format = "[$symbol $branch]($style) ⏽"
+
+[python]
+style = "green"
+format = ' [($virtualenv)]($style) ⏽'
 
 [cmd_duration]
 style = "bold #174FCA"
 
-[git_branch]
-style = "#174FCA"
-format = "[$symbol$branch]($style) "
+[line_break]
+disabled = true
+
+[time]
+style = "magenta normal"
+time_format = "%R"
+format = " $time($style) "
+disabled = false
+
+[character]
+success_symbol = "[⭢ ](bold yellow)"
+error_symbol = "[⭢ ](bold red)"
 
 
-[git_status]
-format = '([$all_status$ahead_behind]($style) )'
-
-[python]
-format = '[${symbol} (\($virtualenv\) )]($style)'
-symbol = "p"
-style = "green"
-
-
+[aws]
+disabled = true
+format = '[$profile:($region)]($style)'
+style = 'red'
 [nodejs]
 disabled = true
-
 [crystal]
 disabled = true
-
 [dart]
 disabled = true
-
 [deno]
 disabled = true
-
 [docker_context]
 disabled = true
-
 [dotnet]
 disabled = true
-
 [elixir]
 disabled = true
-
 [elm]
 disabled = true
-
 [erlang]
 disabled = true
-
 [gcloud]
 disabled = true
-
 [golang]
 disabled = true
-
 [helm]
 disabled = true
-
 [java]
 disabled = true
-
 [julia]
 disabled = true
-
 [kotlin]
 disabled = true
-
 [kubernetes]
 disabled = true
-
 [lua]
 disabled = true
-
 [memory_usage]
 disabled = true
-
 [hg_branch]
 disabled = true
-
 [nim]
 disabled = true
-
 [nix_shell]
 disabled = true
-
 [ocaml]
 disabled = true
-
 [openstack]
 disabled = true
-
 [perl]
 disabled = true
-
 [php]
 disabled = true
-
 [purescript]
 disabled = true
-
 [red]
 disabled = true
-
 [ruby]
 disabled = true
-
 [scala]
 disabled = true
-
 [shell]
 disabled = true
-
 [singularity]
 disabled = true
-
 [swift]
 disabled = true
-
 [terraform]
 disabled = true
-
 [vagrant]
 disabled = true
-
 [vcsh]
 disabled = true
-
 [zig]
 disabled = true
