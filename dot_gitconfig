@@ -1,0 +1,49 @@
+[core]
+	editor = nvim
+
+	# delta
+	pager = delta --dark --plus-color="#012800" --minus-color="#340001" --theme="OneHalfDark"
+	diff = delta
+    	log = delta
+    	reflog = delta
+    	show = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[user]
+	name = jqtrde
+	email = hi@jacquestardie.org
+
+[github]
+  	user = jqtrde
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[alias]
+    a = add
+    ap = add -p
+    br = branch
+    ci = commit -v
+    cim = commit -m
+    co = checkout
+    d = diff
+    da = diff-tree --no-commit-id --name-only -r
+    l = "log --pretty=format:' %C(#444444)%cs%Creset %C(#777777)%h%  ∙%Creset %s %C(bold #2D67E7)%D%Creset%C(#444444)∙ %an%Creset'"
+    p = pull
+    prune = fetch --prune  # remove local branches with aren't tracked remotely
+    pu = push
+    r = restore
+    s = status
+    sta = stash save --include-untracked
+    stls = "stash list --format='%gd (%cr): %gs'"
+    u = reset --soft HEAD^
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

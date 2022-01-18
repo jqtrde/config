@@ -23,7 +23,7 @@ $character"""
 # ⏽
 
 [directory]
-style = "black"
+style = "white"
 format = "[$path]($style)[$read_only]($read_only_style) ⏽"
 truncate_to_repo = true
 truncation_symbol = "…/"
