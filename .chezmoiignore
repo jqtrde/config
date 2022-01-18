@@ -1,3 +1,5 @@
 downloads/
 src/
 .Xauthority
+*.boltdb
+README.md
